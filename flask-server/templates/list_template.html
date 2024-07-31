@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Secret Shares Display</title>
+    <style>
+        ul {
+            list-style-type: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Secret Shares:</h1>
+
+    <ul>
+        {% for item in my_list %}
+        <li>{{ item }}
+            <form action="/download/{{ item }}" method="get" style="display: inline;">
+                <button type="submit">Download</button>
+            </form>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+
+</html>
